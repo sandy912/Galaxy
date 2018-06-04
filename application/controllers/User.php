@@ -42,12 +42,12 @@ function validate_captcha() {
         }
     }
 
-public function register($secret = null){
+public function register($refferal_id = null){
   // $cookieData = get_cookie("refferal");
-  if ($secret != null) {
+  if ($refferal_id != null) {
     $cookie= array(
          'name'   => 'refferal',
-         'value'  => $secret,
+         'value'  => $refferal_id,
          'expire' => '604800'
      );
      $this->input->set_cookie($cookie);
@@ -55,7 +55,7 @@ public function register($secret = null){
 
   }
   else {
-     if(!($this->session->userdata('user_secret'))) {
+     if(!($this->session->userdata('refferal_id'))) {
        $this->load->view('register');
      }
      else {
@@ -77,44 +77,38 @@ public function register_user(){
         $cookieData = 000;
       }
       $user=array(
-        'user_id'=>$this->input->post('user_id'),
-        'user_name'=>$this->input->post('user_name'),
-        'user_email'=>$this->input->post('user_email'),
-        'user_facebook'=>$this->input->post('user_facebook'),
-        'user_twitter'=>$this->input->post('user_twitter'),
-        'user_password'=>md5($this->input->post('user_password')),
+        'email'=>$this->input->post('user_email'),
+        'erc20'=>$this->input->post('user_erc20'),
+        'country'=>$this->input->post('user_country'),
         'reffered_by'=> $cookieData
         );
       //  print_r($user);
 
-      $email_check=$this->user_model->email_check($user['user_email']);
+      $email_check=$this->user_model->email_check($user['email']);
+      $erc20_check=$this->user_model->wallet_check($user['erc20']);
 
-      if($email_check){
+      if($email_check && $erc20_check){
         $this->user_model->register_user($user);
 
-        //$query = $this->db->query('SELECT `user_secret` FROM `user` WHERE `user_email` = ".$user['user_email']."');
         $this->db->select('*');
         $this->db->from('user');
-        $this->db->where('user_email',$user['user_email']);
+        $this->db->where('email',$user['email']);
 
         if($query=$this->db->get()){
             $value = $query->row_array();
         }
-        //else{
-      //    return false;
-      //  }
-        $this->session->set_userdata('user_email',$user['user_email']);
-        $this->session->set_userdata('user_secret', $value['user_secret']);
+        $this->session->set_userdata('email',$user['email']);
+        $this->session->set_userdata('refferal_id', $value['$refferal_id']);
         redirect('user/profile');
       }
       else{
-        $this->session->set_flashdata('error_msg', 'Email already exists, Please login');
+        $this->session->set_flashdata('error_msg', 'Email/Wallet Address already exists, Please login');
         redirect('user/register');
       }
 }
 
 public function login(){
-  if(!($this->session->userdata('user_secret'))) {
+  if(!($this->session->userdata('refferal_id'))) {
     $this->load->view('login');
   }
   else {
@@ -128,21 +122,21 @@ function login_user(){
   if($this->form_validation->run() == FALSE) {
     $this->load->view("login");
   } else {
-  $user_login=array(
-  'user_email'=>$this->input->post('user_email'),
-  'user_password'=>md5($this->input->post('user_password'))
+  $user_login = array(
+  'email'=>$this->input->post('user_email'),
+  'erc20'=>$this->input->post('user_erc20')
   );
 
 
-    $data=$this->user_model->login_user($user_login['user_email'],$user_login['user_password']);
+    $data=$this->user_model->login_user($user_login['email'],$user_login['erc20']);
       if($data)
       {
-        $this->session->set_userdata('user_email',$data['user_email']);
-        $this->session->set_userdata('user_secret',$data['user_secret']);
+        $this->session->set_userdata('email',$data['email']);
+        $this->session->set_userdata('refferal_id',$data['refferal_id']);
         redirect('user/profile');
       }
       else{
-        $this->session->set_flashdata('error_msg', 'Incorrect Email or Password');
+        $this->session->set_flashdata('error_msg', 'Email and Wallet Address does not match');
         $this->load->view("login");
       }
     }
@@ -150,7 +144,7 @@ function login_user(){
 
 
 function profile(){
-  $temp = $this->db->where('reffered_by', $this->session->userdata('user_secret'))->count_all_results('user');
+  $temp = $this->db->where('reffered_by', $this->session->userdata('refferal_id'))->count_all_results('user');
   $this->session->set_userdata('myrefferals',$temp);
   $this->load->view('user_profile');
 }

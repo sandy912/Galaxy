@@ -9,8 +9,8 @@ class User_model extends CI_model{
 
     $this->db->select('*');
     $this->db->from('user');
-    $this->db->where('user_email',$email);
-    $this->db->where('user_password',$pass);
+    $this->db->where('email',$email);
+    $this->db->where('erc20',$pass);
 
     if($query=$this->db->get()){
         return $query->row_array();
@@ -24,7 +24,7 @@ class User_model extends CI_model{
 
     $this->db->select('*');
     $this->db->from('user');
-    $this->db->where('user_email',$email);
+    $this->db->where('email',$email);
     $query=$this->db->get();
 
     if($query->num_rows()>0){
@@ -34,19 +34,19 @@ class User_model extends CI_model{
     }
   }
 
-//  public function wallet_check($wallet){
+ public function wallet_check($wallet){
 
-  //  $this->db->select('*');
- //   $this->db->from('user');
- //   $this->db->where('user_wallet',$wallet);
-  //  $query=$this->db->get();
+   $this->db->select('*');
+   $this->db->from('user');
+   $this->db->where('erc20',$wallet);
+   $query=$this->db->get();
 
-  //  if($query->num_rows()>0){
-  //    return false;
-  //  }else{
-   //   return true;
-  //  }
- // }
+   if($query->num_rows()>0){
+     return false;
+   }else{
+     return true;
+   }
+ }
 
 }
 ?>
