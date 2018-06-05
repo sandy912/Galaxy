@@ -5,12 +5,17 @@
       <div class="container">
         <div class="row">
             <div class="header-content container-one">
-              <h1 class="mb-5">Firefly brings blockchain to the masses. Simple, Easy, day to day micro payments at your finger tips!</h1>
-              <h4 class="ff-desc"><b>World's first blockchain to have it's own Machine Learning(ML) SmartContract.</b></h4>
-              <a href="/user/register" class="btn btn-outline btn-xl text-center text-bold">Go to Airdrop</a>
-              <h3 class="mega-airdrop">New Roadmap, Whitepaper, Team details will be released in</h3>
+              <h1 class="mb-5">Crypto Galaxy incorporates every useful feature utilized in top tier currencies with unmatched privacy!</h1>
+              <h4 class="ff-desc"><b>An all-in-one single decentralized platform.</b></h4>
+              <a href="/user/register" class="btn btn-outline btn-xl text-center text-bold">Go to Airdrop Event</a>
+              <h3 class="mega-airdrop">Crypto Galaxy Token (CGT) has completed its sales goal!</h3>
+              <h4>HardCap reached in private sale itself.</h4>
+              <div class="ico_progress_bar">
+              <div class="ico_progress_bar_eth_now" style="width: 100%"><span class = "ico_progress_bar_now_text"></span></div>
+              <center>15000/ 15000 ETH  (100% raised in private sale)</center>
+              </div>
             </div>
-            <div id="DateCountdown" data-date="2018-06-25 00:00:00" style="width:80%;">
+
           </div>
         </div>
       </div>
@@ -19,7 +24,7 @@
 <section class="features" id="features">
       <div class="container">
         <div class="section-heading text-center">
-          <h2>Unlimited Features, Seamless Experience!</h2>
+          <h2>Unmatched Features, Highly Secured!</h2>
           <p class="text-muted">Check out what firefly app lets you to do.</p>
           <hr>
         </div>

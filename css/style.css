@@ -189,10 +189,10 @@ section h2 {
   }
   #mainNav.navbar-shrink {
     border-color: rgba(34, 34, 34, 0.1);
-    background-color: white;
+    background-color: #0b1933;
   }
   #mainNav.navbar-shrink .navbar-brand {
-    color: #222222;
+    color: #b7b7b7;
   }
   #mainNav.navbar-shrink .navbar-brand:hover,
   #mainNav.navbar-shrink .navbar-brand:focus {
@@ -201,7 +201,7 @@ section h2 {
   #mainNav.navbar-shrink .navbar-nav>li>a,
   #mainNav.navbar-shrink .navbar-nav>li>a:focus,
   #mainNav.navbar-shrink .navbar-nav li i{
-    color: #222222;
+    color: #b7b7b7;
   }
   #mainNav.navbar-shrink .navbar-nav>li>a:hover,
   #mainNav.navbar-shrink .navbar-nav>li>a:focus:hover {
@@ -259,7 +259,7 @@ header.masthead .device-container .screen img {
     text-align: left;
   }
   header.masthead .header-content h1 {
-    font-size: 50px;
+    font-size: 40px;
   }
   .nav-item.dropdown {
     position: relative;
@@ -522,7 +522,7 @@ footer ul li a.active {
 .btn-outline {
   color: white;
   border: 1px solid;
-  border-color: white;
+  border-color: #5bddff;
 }
 
 .btn-outline:hover,
@@ -530,7 +530,7 @@ footer ul li a.active {
 .btn-outline:active,
 .btn-outline.active {
   color: white;
-  border-color: #0c204b;
+  border-color: #5bddff;
   background-color: #29447c;
   font-weight: bold;
 }
@@ -641,10 +641,9 @@ textarea {
 }
 
 .mega-airdrop {
-  position: relative;
-  top: 50px;
+  padding-top: 40px;
   font-weight: 500;
-  font-size: 1.3rem;
+  font-size: 1.6rem;
 }
 
 .ff-desc {
@@ -867,4 +866,24 @@ h1.mb-5 {
 
 .container {
   position: relative;
+}
+
+.ico_progress_bar {
+    width: 90%;
+    margin: 30px auto 0;
+    padding: 3px;
+    position: relative;
+    height: 36px;
+    border: 1px solid #3effff;
+    text-align: center;
+}
+
+.ico_progress_bar_cmt_now, .ico_progress_bar_eth_now {
+    height: 28px;
+    background: linear-gradient(to right,#3effff,#99f);
+    line-height: 34px;
+    text-align: right;
+}
+.ico_progress_bar  center {
+  margin-top: 35px;
 }

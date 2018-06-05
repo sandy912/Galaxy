@@ -16,7 +16,6 @@
       <link href="https://fonts.googleapis.com/css?family=Catamaran:100,200,300,400,500,600,700,800,900" rel="stylesheet">
       <link href="https://fonts.googleapis.com/css?family=Muli" rel="stylesheet">
       <link rel = "stylesheet" type = "text/css" href = "<?php echo base_url();?>css/style.css">
-      <link rel="stylesheet" type = "text/css" href="<?php echo base_url();?>js/inc/TimeCircles.css" >
     </head>
     <body id="page-top">
     <nav class="navbar navbar-expand-lg navbar-light fixed-top" id="mainNav">

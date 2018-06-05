@@ -22,7 +22,6 @@
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.4.1/jquery.easing.min.js"></script>
 <script src = "<?php echo base_url();?>js/script.js"></script>
 <script  src ="<?php echo base_url();?>js/new-age.js"></script>
-<script src="<?php echo base_url();?>js/inc/TimeCircles.js"></script>
 <script>
 //$( '.js-float-label-wrapper' ).FloatLabel();
 $("#DateCountdown").TimeCircles({
