@@ -25,62 +25,97 @@
       <div class="container">
         <div class="section-heading text-center">
           <h2>Unmatched Features, Highly Secured!</h2>
-          <p class="text-muted">Check out what firefly app lets you to do.</p>
+          <p class="text-muted">We got them all. Yes! all.</p>
           <hr>
         </div>
+
+
         <div class="row">
-          <div class="col-lg-4 my-auto">
-            <div class="device-container">
-              <div class="device-mockup iphone6_plus portrait white">
-                <div class="device">
-                  <div class="screen">
-                    <!-- Demo image for screen mockup, you can put an image here, some HTML, an animation, video, or anything else! -->
-                    <img src="img/demo-screen-1.png" class="img-fluid" alt="">
-                  </div>
-                  <div class="button">
-                    <!-- You can hook the "home button" to some JavaScript events or just remove it -->
-                  </div>
-                </div>
-              </div>
+          <div class="col-lg-4">
+            <div class="feature-item">
+              <h3>Fast Payments</h3>
+              <p class="text-muted">Confirm payments in less than 15 seconds. Rated at 10k tps.</p>
             </div>
           </div>
-          <div class="col-lg-8 my-auto">
-            <div class="container-fluid">
-              <div class="row">
-                <div class="col-lg-6">
-                  <div class="feature-item">
-                    <i class="icon-energy text-primary"></i>
-                    <h3>Fast Payments</h3>
-                    <p class="text-muted">Confirm payments in less than 15 seconds. Rated at 10k tps.</p>
-                  </div>
-                </div>
-                <div class="col-lg-6">
-                  <div class="feature-item">
-                    <i class="icon-wallet text-primary"></i>
-                    <h3>Safe and Secure</h3>
-                    <p class="text-muted">Coins stored in mobile wallets are safe and immune to attacks.</p>
-                  </div>
-                </div>
-              </div>
-              <div class="row">
-                <div class="col-lg-6">
-                  <div class="feature-item">
-                    <i class="icon-user text-primary"></i>
-                    <h3>Unique ID</h3>
-                    <p class="text-muted">Unique ID lets you to choose a readable name for your wallet address at free of cost.</p>
-                  </div>
-                </div>
-                <div class="col-lg-6">
-                  <div class="feature-item">
-                    <i class="icon-organization text-primary"></i>
-                    <h3>Smart Contracts</h3>
-                    <p class="text-muted">Machine learning helps you to create smart contract easily for recurring and split payments.</p>
-                  </div>
-                </div>
-              </div>
+          <div class="col-lg-4">
+            <div class="feature-item">
+              <h3>Fast Payments</h3>
+              <p class="text-muted">Confirm payments in less than 15 seconds. Rated at 10k tps.</p>
+            </div>
+          </div>
+          <div class="col-lg-4">
+            <div class="feature-item">
+              <h3>Fast Payments</h3>
+              <p class="text-muted">Confirm payments in less than 15 seconds. Rated at 10k tps.</p>
             </div>
           </div>
         </div>
+
+
+        <div class="row">
+          <div class="col-lg-4">
+            <div class="feature-item">
+              <h3>Fast Payments</h3>
+              <p class="text-muted">Confirm payments in less than 15 seconds. Rated at 10k tps.</p>
+            </div>
+          </div>
+          <div class="col-lg-4">
+            <div class="feature-item">
+              <h3>Fast Payments</h3>
+              <p class="text-muted">Confirm payments in less than 15 seconds. Rated at 10k tps.</p>
+            </div>
+          </div>
+          <div class="col-lg-4">
+            <div class="feature-item">
+              <h3>Fast Payments</h3>
+              <p class="text-muted">Confirm payments in less than 15 seconds. Rated at 10k tps.</p>
+            </div>
+          </div>
+        </div>
+
+
+        <div class="row">
+          <div class="col-lg-4">
+            <div class="feature-item">
+              <h3>Fast Payments</h3>
+              <p class="text-muted">Confirm payments in less than 15 seconds. Rated at 10k tps.</p>
+            </div>
+          </div>
+          <div class="col-lg-4">
+            <div class="feature-item">
+              <h3>Fast Payments</h3>
+              <p class="text-muted">Confirm payments in less than 15 seconds. Rated at 10k tps.</p>
+            </div>
+          </div>
+          <div class="col-lg-4">
+            <div class="feature-item">
+              <h3>Fast Payments</h3>
+              <p class="text-muted">Confirm payments in less than 15 seconds. Rated at 10k tps.</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="col-lg-4">
+            <div class="feature-item">
+              <h3>Fast Payments</h3>
+              <p class="text-muted">Confirm payments in less than 15 seconds. Rated at 10k tps.</p>
+            </div>
+          </div>
+          <div class="col-lg-4">
+            <div class="feature-item">
+              <h3>Fast Payments</h3>
+              <p class="text-muted">Confirm payments in less than 15 seconds. Rated at 10k tps.</p>
+            </div>
+          </div>
+          <div class="col-lg-4">
+            <div class="feature-item">
+              <h3>Fast Payments</h3>
+              <p class="text-muted">Confirm payments in less than 15 seconds. Rated at 10k tps.</p>
+            </div>
+          </div>
+        </div>
+
       </div>
     </section>
 <section class="download bg-primary text-center" id="download">
