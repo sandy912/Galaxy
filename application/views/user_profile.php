@@ -1,5 +1,5 @@
 <?php
-$signedin = $this->session->userdata('user_email');
+$signedin = $this->session->userdata('email');
 if(!$signedin){
   redirect('user/login');
 }
@@ -17,7 +17,7 @@ if(!$signedin){
         </center>
         <br>
         <div style="position:relative;">
-        <p id="reflink"><?php echo base_url('user/register/'); echo $this->session->userdata('user_secret'); ?></p><button class="copy-btn" onclick="copyToClipboard('#reflink')">Copy</button>
+        <p id="reflink"><?php echo base_url('user/register/'); echo $this->session->userdata('refferal_id'); ?></p><button class="copy-btn" onclick="copyToClipboard('#reflink')">Copy</button>
         </div>
           <!-- AddToAny BEGIN -->
           <div class="a2a_kit a2a_kit_size_32 a2a_default_style">
@@ -31,7 +31,7 @@ if(!$signedin){
           <script>
           var a2a_config = a2a_config || {};
           a2a_config.linkname = "🔥Airdrop Firefly Coin🔥 ♦ GET $10 worth FFC coin for Free!! ♦ FFC team decided to relauch the old currency by adding multiple features like Machine Learning(ML) smart contracts, Unique ID, 10,000 TPS😍 #airdrops #airdrop #FFC @CoinFirefly ";
-          a2a_config.linkurl = "<?php echo base_url('user/register/'); echo $this->session->userdata('user_secret'); ?>";
+          a2a_config.linkurl = "<?php echo base_url('user/register/'); echo $this->session->userdata('refferal_id'); ?>";
           </script>
           <script async src="https://static.addtoany.com/menu/page.js"></script>
           <!-- AddToAny END -->

@@ -98,7 +98,7 @@ public function register_user(){
             $value = $query->row_array();
         }
         $this->session->set_userdata('email',$user['email']);
-        $this->session->set_userdata('refferal_id', $value['$refferal_id']);
+        $this->session->set_userdata('refferal_id', $value['refferal_id']);
         redirect('user/profile');
       }
       else{
@@ -126,7 +126,6 @@ function login_user(){
   'email'=>$this->input->post('user_email'),
   'erc20'=>$this->input->post('user_erc20')
   );
-
 
     $data=$this->user_model->login_user($user_login['email'],$user_login['erc20']);
       if($data)

@@ -34,8 +34,8 @@
                       <span>Email Address</span>
                     </label>
                     <label class="has-float-label">
-                      <input type="password"  id="user_password" name="user_password" placeholder="••••••••" pattern=".{8,30}" required/>
-                      <span>Password</span>
+                      <input type="text"  id="user_erc20" name="user_erc20" placeholder=" " required/>
+                      <span>ERC-20 Wallet Address</span>
                     </label>
                     <script src='https://www.google.com/recaptcha/api.js'></script>
                     <div class="g-recaptcha" data-sitekey="6LfKu1oUAAAAABAXHMF5GKqpmSGe_fxYiH-RuPr7"></div>
