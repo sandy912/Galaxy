@@ -1,6 +1,7 @@
 <?php $this->load->view('header'); ?>
 
 <header class="masthead">
+  <canvas id = "canvasOne"></canvas><div class = "moonFlare"><canvas id = "fireFlies"></canvas></div>
       <div class="container">
         <div class="row">
             <div class="header-content container-one">
@@ -14,8 +15,6 @@
         </div>
       </div>
 </header>
-
-
 
 <section class="features" id="features">
       <div class="container">

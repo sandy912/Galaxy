@@ -7,6 +7,7 @@ if(!$signedin){
 <?php $this->load->view('header'); ?>
 
 <header class="masthead mobile-panel">
+  <canvas id = "canvasOne"></canvas><div class = "moonFlare"><canvas id = "fireFlies"></canvas></div>
   <div class="container">
     <div class="row">
       <div class="register-panel" style="max-width: 550px;">

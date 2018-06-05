@@ -5,7 +5,7 @@
         <div class="row">
           <div class="register-panel">
               <div class="panel-heading">
-                  <h3 class="panel-title"><center>Login</center></h3>
+                  <h3 class="panel-title"><center>Sign-in</center></h3>
               </div>
               <?php
             $success_msg= $this->session->flashdata('success_msg');
@@ -34,13 +34,13 @@
                       <span>Email Address</span>
                     </label>
                     <label class="has-float-label">
-                      <input type="text"  id="user_erc20" name="user_erc20" placeholder=" " required/>
+                      <input id="user_erc20" name="user_erc20" type="text" placeholder="0x52908400098500886E0F7030069857D2E4169E86" pattern="^0x[a-fA-F0-9]{40}$" required/>
                       <span>ERC-20 Wallet Address</span>
                     </label>
                     <script src='https://www.google.com/recaptcha/api.js'></script>
                     <div class="g-recaptcha" data-sitekey="6LfKu1oUAAAAABAXHMF5GKqpmSGe_fxYiH-RuPr7"></div>
                     <br>
-                    <input class="btn btn-outline btn-xl text-center" type="submit" value="login" name="login" >
+                    <input class="btn btn-outline btn-xl text-center" type="submit" value="Sign-in" name="login" >
                   </form>
                   <center>Not registered?<br><a href="<?php echo base_url('user/register'); ?>">Register here</a></center>
               </div>

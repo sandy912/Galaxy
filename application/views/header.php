@@ -7,7 +7,7 @@
       <meta property="og:image" content="https://fireflycoin.ml/vendor/assets/Register-Banner1.png">
       <meta property="og:title" content="Firefly Coin(FFC) - Get 10$ worth of FFC for Free - World's first blockchain with Machine Learning(ML) SmartContract">
       <meta property="og:description" content="🔥 Airdrop Firefly Coin 🔥 We Believe the community is the biggest asset. Therefore, we want to spread our love by offering an Airdrop. Register and get 10$ worth  of FFC for Free.">
-      <title>Firefly Coin(FFC) - SmartContracts Based on Machine Learning(ML)</title>
+      <title>Crypto Galaxy(CGT) - SmartContracts Based on Machine Learning(ML)</title>
       <link rel='shortcut icon' href='/favicon.png' type='image/x-icon' />
       <link rel="stylesheet" href="<?php echo base_url();?>vendor/bootstrap/css/bootstrap.min.css" media="screen" title="no title">
       <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
@@ -21,7 +21,7 @@
     <body id="page-top">
     <nav class="navbar navbar-expand-lg navbar-light fixed-top" id="mainNav">
       <div class="container">
-        <a class="navbar-brand js-scroll-trigger" href="/#page-top"><img alt="brand" src="<?php echo base_url(); ?>/img/fireflycoin.png" />Firefly Coin</a>
+        <a class="navbar-brand js-scroll-trigger" href="/#page-top"><img alt="brand" src="<?php echo base_url(); ?>/img/galaxy-logo.png" /> Crypto Galaxy </a>
         <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
           <i class="fa fa-bars"></i>
           <i class="fa fa-times"></i>
