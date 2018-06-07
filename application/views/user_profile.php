@@ -7,16 +7,46 @@ if(!$signedin){
 <?php $this->load->view('header'); ?>
 
 <header class="masthead mobile-panel">
-  <canvas id = "canvasOne"></canvas><div class = "moonFlare"><canvas id = "fireFlies"></canvas></div>
   <div class="container">
     <div class="row">
       <div class="register-panel" style="max-width: 550px;">
         <h4 class="text-center"><b>Thank you for signing up for Airdrop!</b></h4>
-        <center>
-          <h5><b>Earn upto <h4 style="display: inline-block; font-weight: bold">1500$</h4> by inviting your friends</b></h5>
-          Now refer your friends to earn more FFC, each successful refferal will get you <h5 style="display: inline-block; font-weight: bold">10$</h5> worth of FFC.
-        </center>
+        <h5 class="text-center cgt-balance"> My Balance: <span><?php
+          $amount = (($this->session->userdata('myrefferals')*10)+20);
+          if( $amount > 1500 ) { echo '1500';}
+          else { echo $amount; }
+          ?>$ CGT </span></h5>
+        <p>To earn more CGT tokens complete the below social media tasks and reffer your friends.</p>
+
+        <form role="form" method="post" action="<?php echo base_url('user/telegram'); ?>">
+          <div class="cgt-form">
+            <input class="cgt-input" id="user_telegram" name="user_telegram" type="text" placeholder="Telegram Username" required/>
+            <input class="cgt-form-submit" type="submit" value="✓" >
+          </div>
+        </form>
         <br>
+        <form role="form" method="post" action="<?php echo base_url('user/twitter'); ?>">
+          <div class="cgt-form">
+            <input class="cgt-input" id="user_twitter" name="user_twitter" type="url" placeholder="Retweet link" required/>
+            <input class="cgt-form-submit" type="submit" value="✓" >
+          </div>
+        </form>
+        <br>
+        <form role="form" method="post" action="<?php echo base_url('user/facebook'); ?>">
+          <div class="cgt-form">
+            <input class="cgt-input" id="user_facebook" name="user_facebook" type="url" placeholder="Facebook Profile link" required/>
+            <input class="cgt-form-submit" type="submit" value="✓" >
+          </div>
+        </form>
+        <br>
+        <form role="form" method="post" action="<?php echo base_url('user/youtube'); ?>">
+          <div class="cgt-form">
+            <input class="cgt-input" id="user_youtube" name="user_youtube" type="url" placeholder="Yourtube username" required/>
+            <input class="cgt-form-submit" type="submit" value="✓" >
+          </div>
+        </form>
+        <br>
+
         <div style="position:relative;">
         <p id="reflink"><?php echo base_url('user/register/'); echo $this->session->userdata('refferal_id'); ?></p><button class="copy-btn" onclick="copyToClipboard('#reflink')">Copy</button>
         </div>
@@ -43,34 +73,8 @@ if(!$signedin){
                   <span><?php echo $this->session->userdata('myrefferals'); ?></span>
                   <span>Users</span>
                 </div>
-                <div class="box">
-                  <p>Earned</p>
-                  <span><?php
-                  $amount = (($this->session->userdata('myrefferals')*10)+10);
-
-                    if( $amount > 1500 ) {
-                      echo '1500';
-                    }
-                    else {
-                      echo $amount;
-                    }
-
-                    ?>$</span>
-                  <span>Worth FFC</span>
-                </div>
-          </div>
-          <div class="cursor-banned withdraw-info">
-            <label class="has-float-label cursor-banned">
-              <input type="text" id="wallet" name="wallet" class="cursor-banned" placeholder="Wallet Address" style="font-size: 10px;" disabled/>
-              <span class="cursor-banned" style="font-size: 13px;">Wallet Address</span>
-            </label>
-            <button class="copy-btn cursor-banned">Withdraw</button>
-            <div class="cursor-banned">
-              <small class="cursor-banned">On Airdrop ending date or on reaching 40k participants your earned $ will be converted to equivalent FFC based on coin value at distribution time. Then you can Withdraw coins to your wallet.</small>
-            </div>
           </div>
           <small><b>Warning:</b> If we find any unwanted activities like multiple accounts, bots, etc.. Your earned $ will not be converted to FFC.</small>
-          <br>
           <br>
           <p>In case if you missed to follow Firefly Coin on <a href="https://t.me/CoinFirefly" target="_blank">Telegram</a>, <a href="https://twitter.com/CoinFirefly" target="_blank">Twitter</a> and <a href="https://www.facebook.com/fireflycoin/" target="_blank">Facebook</a> during registration. Here are the links to do it now. Only those who follow our social media channels will be eligible for airdrop.</p>
         </div>

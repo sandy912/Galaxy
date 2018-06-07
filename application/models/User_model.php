@@ -20,6 +20,22 @@ class User_model extends CI_model{
     }
   }
 
+  public function telegram($telegram) {
+
+  }
+
+  public function twitter($twitter) {
+
+  }
+
+  public function facebook($facebook) {
+
+  }
+
+  public function youtube($youtube) {
+
+  }
+
   public function email_check($email){
 
     $this->db->select('*');

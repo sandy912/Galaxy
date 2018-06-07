@@ -141,10 +141,37 @@ function login_user(){
     }
 }
 
-
-function profile(){
+function profile() {
   $temp = $this->db->where('reffered_by', $this->session->userdata('refferal_id'))->count_all_results('user');
   $this->session->set_userdata('myrefferals',$temp);
+  $this->load->view('user_profile');
+}
+
+function telegram() {
+  $telegram = $this->input->post('user_telegram');
+  $data=$this->user_model->telegram($telegram);
+  $this->session->set_userdata('telegram',$telegram);
+  $this->load->view('user_profile');
+}
+
+function twitter() {
+  $twitter = $this->input->post('user_twitter');
+  $data=$this->user_model->twitter($twitter);
+  $this->session->set_userdata('twitter',$twitter);
+  $this->load->view('user_profile');
+}
+
+function facebook() {
+  $facebook = $this->input->post('user_facebook');
+  $data=$this->user_model->facebook($facebook);
+  $this->session->set_userdata('facebook',$facebook);
+  $this->load->view('user_profile');
+}
+
+function youtube() {
+  $youtube = $this->input->post('user_youtube');
+  $data=$this->user_model->youtube($youtube);
+  $this->session->set_userdata('youtube',$youtube);
   $this->load->view('user_profile');
 }
 
