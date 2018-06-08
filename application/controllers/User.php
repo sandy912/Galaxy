@@ -99,6 +99,9 @@ public function register_user(){
         }
         $this->session->set_userdata('email',$user['email']);
         $this->session->set_userdata('refferal_id', $value['refferal_id']);
+        $this->session->set_userdata('telegram',$user['telegram']);
+        $this->session->set_userdata('twitter', $value['twitter']);
+        $this->session->set_userdata('facebook',$user['facebook']);
         redirect('user/profile');
       }
       else{
@@ -127,11 +130,14 @@ function login_user(){
   'erc20'=>$this->input->post('user_erc20')
   );
 
-    $data=$this->user_model->login_user($user_login['email'],$user_login['erc20']);
+    $data = $this->user_model->login_user($user_login['email'],$user_login['erc20']);
       if($data)
       {
         $this->session->set_userdata('email',$data['email']);
         $this->session->set_userdata('refferal_id',$data['refferal_id']);
+        $this->session->set_userdata('telegram',$data['telegram']);
+        $this->session->set_userdata('twitter',$data['twitter']);
+        $this->session->set_userdata('facebook',$data['facebook']);
         redirect('user/profile');
       }
       else{
@@ -149,28 +155,32 @@ function profile() {
 
 function telegram() {
   $telegram = $this->input->post('user_telegram');
-  $data=$this->user_model->telegram($telegram);
+  $refferal_id = $this->session->userdata('refferal_id');
+  $this->user_model->telegram($telegram, $refferal_id);
   $this->session->set_userdata('telegram',$telegram);
   $this->load->view('user_profile');
 }
 
 function twitter() {
   $twitter = $this->input->post('user_twitter');
-  $data=$this->user_model->twitter($twitter);
+  $refferal_id = $this->session->userdata('refferal_id');
+  $this->user_model->twitter($twitter, $refferal_id);
   $this->session->set_userdata('twitter',$twitter);
   $this->load->view('user_profile');
 }
 
 function facebook() {
   $facebook = $this->input->post('user_facebook');
-  $data=$this->user_model->facebook($facebook);
+  $refferal_id = $this->session->userdata('refferal_id');
+  $this->user_model->facebook($facebook, $refferal_id);
   $this->session->set_userdata('facebook',$facebook);
   $this->load->view('user_profile');
 }
 
 function youtube() {
   $youtube = $this->input->post('user_youtube');
-  $data=$this->user_model->youtube($youtube);
+  $refferal_id = $this->session->userdata('refferal_id');
+  $this->user_model->youtube($youtube, $refferal_id);
   $this->session->set_userdata('youtube',$youtube);
   $this->load->view('user_profile');
 }

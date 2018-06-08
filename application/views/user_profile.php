@@ -1,5 +1,12 @@
 <?php
 $signedin = $this->session->userdata('email');
+$telegram = $this->session->userdata('telegram');
+$twitter = $this->session->userdata('twitter');
+$facebook = $this->session->userdata('facebook');
+
+// if(!$twitter == ("NULL" || NULL) {$user_twitter = $twitter}
+// if(!$facebook == ("NULL" || NULL) {$user_facebook = $facebook}
+
 if(!$signedin){
   redirect('user/login');
 }
@@ -11,7 +18,7 @@ if(!$signedin){
     <div class="row">
       <div class="register-panel" style="max-width: 550px;">
         <h4 class="text-center"><b>Thank you for signing up for Airdrop!</b></h4>
-        <h5 class="text-center cgt-balance"> My Balance: <span><?php
+        <h5 class="text-center cgt-balance">Your Balance: <span><?php
           $amount = (($this->session->userdata('myrefferals')*10)+20);
           if( $amount > 1500 ) { echo '1500';}
           else { echo $amount; }
@@ -20,29 +27,22 @@ if(!$signedin){
 
         <form role="form" method="post" action="<?php echo base_url('user/telegram'); ?>">
           <div class="cgt-form">
-            <input class="cgt-input" id="user_telegram" name="user_telegram" type="text" placeholder="Telegram Username" required/>
-            <input class="cgt-form-submit" type="submit" value="✓" >
+            <input class="cgt-input" id="user_telegram" name="user_telegram" type="text" <?php if($telegram) { echo "value =".$telegram; } ?> placeholder="Telegram Username" required/>
+            <input class="cgt-form-submit <?php if($telegram) { echo "green"; } ?>" type="submit" value="<?php if($telegram) { echo "✓"; } else {echo "Get 20$";} ?>" >
           </div>
         </form>
         <br>
         <form role="form" method="post" action="<?php echo base_url('user/twitter'); ?>">
           <div class="cgt-form">
-            <input class="cgt-input" id="user_twitter" name="user_twitter" type="url" placeholder="Retweet link" required/>
-            <input class="cgt-form-submit" type="submit" value="✓" >
+            <input class="cgt-input" id="user_twitter" name="user_twitter" type="url" <?php if($twitter) { echo "value =".$twitter; } ?> placeholder="Retweet link" required/>
+            <input class="cgt-form-submit <?php if($twitter) { echo "green"; } ?>" type="submit" value="<?php if($twitter) { echo "✓"; } else {echo "Get 20$";} ?>" >
           </div>
         </form>
         <br>
         <form role="form" method="post" action="<?php echo base_url('user/facebook'); ?>">
           <div class="cgt-form">
-            <input class="cgt-input" id="user_facebook" name="user_facebook" type="url" placeholder="Facebook Profile link" required/>
-            <input class="cgt-form-submit" type="submit" value="✓" >
-          </div>
-        </form>
-        <br>
-        <form role="form" method="post" action="<?php echo base_url('user/youtube'); ?>">
-          <div class="cgt-form">
-            <input class="cgt-input" id="user_youtube" name="user_youtube" type="url" placeholder="Yourtube username" required/>
-            <input class="cgt-form-submit" type="submit" value="✓" >
+            <input class="cgt-input" id="user_facebook" name="user_facebook" type="url" <?php if($facebook) { echo "value =".$facebook; } ?> placeholder="Facebook Profile link" required/>
+            <input class="cgt-form-submit <?php if($facebook) { echo "green"; } ?>" type="submit" value="<?php if($facebook) { echo "✓"; } else {echo "Get 20$";} ?>" >
           </div>
         </form>
         <br>

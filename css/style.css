@@ -37,14 +37,6 @@ textarea:focus {
 
 /* Submit Button */
 
-@media (max-width: 390px) {
-  form input[type="text"],
-  form input[type="submit"],
-  form textarea {
-    width: 100%;
-  }
-}
-
 form input[type="submit"] {
   background: transparent;
 }
@@ -913,7 +905,11 @@ h1.mb-5 {
   right: 0;
   border-radius: 50px;
   padding: 10px;
-  width: 70px;
+  width: 80px;
   background: #2c539a !important;
   cursor: pointer;
+}
+
+.cgt-form-submit.green {
+  background: #28a745 !important;
 }

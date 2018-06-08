@@ -20,20 +20,28 @@ class User_model extends CI_model{
     }
   }
 
-  public function telegram($telegram) {
-
+  public function telegram($telegram, $refferal_id) {
+    $this->db->set('telegram', $telegram);
+    $this->db->where('refferal_id', $refferal_id);
+    $this->db->update('user');
   }
 
-  public function twitter($twitter) {
-
+  public function twitter($twitter, $refferal_id) {
+    $this->db->set('twitter', $twitter);
+    $this->db->where('refferal_id', $refferal_id);
+    $this->db->update('user');
   }
 
-  public function facebook($facebook) {
-
+  public function facebook($facebook, $refferal_id) {
+    $this->db->set('facebook', $facebook);
+    $this->db->where('refferal_id', $refferal_id);
+    $this->db->update('user');
   }
 
-  public function youtube($youtube) {
-
+  public function youtube($youtube, $refferal_id) {
+    $this->db->set('youtube', $youtube);
+    $this->db->where('refferal_id', $refferal_id);
+    $this->db->update('user');
   }
 
   public function email_check($email){

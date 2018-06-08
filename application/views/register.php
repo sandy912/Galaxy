@@ -37,7 +37,7 @@
               </label>
 
               <label class="has-float-label">
-                <input type="text" name="search" id="user_country"  placeholder="Enter your Country" list="searchresults" autocomplete="off" required />
+                <input type="text" name="user_country" id="user_country"  placeholder="Enter your Country" list="searchresults" autocomplete="off" required />
                 <span>Country</span>
                 <datalist id="searchresults"></datalist>
               </label>
