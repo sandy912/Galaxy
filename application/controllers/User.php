@@ -102,6 +102,7 @@ public function register_user(){
         $this->session->set_userdata('telegram',$user['telegram']);
         $this->session->set_userdata('twitter', $value['twitter']);
         $this->session->set_userdata('facebook',$user['facebook']);
+        $this->session->set_userdata('youtube',$user['youtube']);
         redirect('user/profile');
       }
       else{
@@ -138,6 +139,7 @@ function login_user(){
         $this->session->set_userdata('telegram',$data['telegram']);
         $this->session->set_userdata('twitter',$data['twitter']);
         $this->session->set_userdata('facebook',$data['facebook']);
+        $this->session->set_userdata('youtube',$data['youtube']);
         redirect('user/profile');
       }
       else{
